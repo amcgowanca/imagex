@@ -6,6 +6,5 @@ core = 7.x
 php = 5.3.3
 
 files[] = includes/ImagexException.class.inc
-
 files[] = includes/fields.utilities.inc
 files[] = includes/taxonomy.utilities.inc
