@@ -49,6 +49,11 @@ define('IMAGEX_CORE_MAJOR_VERSION', '7.x');
 define('IMAGEX_SCHEMA_PREFIX', 'imagex_');
 
 /**
+ * Denotes the core admin (uid = 1) user identifier.
+ */
+define('IMAGEX_ADMINISTRATOR_UID', 1);
+
+/**
  * Returns the current operating mode of ImageX install profile.
  *
  * @return int
@@ -523,7 +528,7 @@ function _imagex_variables_delete(array $variables = array()) {
  *   otherwise returns FALSE.
  */
 function imagex_drupal_is_installing() {
-  return 'done' == variable_get('install_task', NULL) ? TRUE : FALSE;
+  return 'done' == variable_get('install_task', NULL) ? FALSE : TRUE;
 }
 
 /**
